@@ -1,0 +1,59 @@
+
+[1m======================================================================
+A. 19 TEST VECTOR CHINH THUC CUA BIP-340
+======================================================================[0m
+[92m  vector  0: DAT  (mong doi True)  [0m
+[92m  vector  1: DAT  (mong doi True)  [0m
+[92m  vector  2: DAT  (mong doi True)  [0m
+[92m  vector  3: DAT  (mong doi True)  test fails if msg is reduced modulo p or n[0m
+[92m  vector  4: DAT  (mong doi True)  [0m
+[92m  vector  5: DAT  (mong doi False)  public key not on the curve[0m
+[92m  vector  6: DAT  (mong doi False)  has_even_y(R) is false[0m
+[92m  vector  7: DAT  (mong doi False)  negated message[0m
+[92m  vector  8: DAT  (mong doi False)  negated s value[0m
+[92m  vector  9: DAT  (mong doi False)  sG - eP is infinite. Test fails in single verifica[0m
+[92m  vector 10: DAT  (mong doi False)  sG - eP is infinite. Test fails in single verifica[0m
+[92m  vector 11: DAT  (mong doi False)  sig[0:32] is not an X coordinate on the curve[0m
+[92m  vector 12: DAT  (mong doi False)  sig[0:32] is equal to field size[0m
+[92m  vector 13: DAT  (mong doi False)  sig[32:64] is equal to curve order[0m
+[92m  vector 14: DAT  (mong doi False)  public key is not a valid X coordinate because it [0m
+[92m  vector 15: DAT  (mong doi True)  message of size 0 (added 2022-12)[0m
+[92m  vector 16: DAT  (mong doi True)  message of size 1 (added 2022-12)[0m
+[92m  vector 17: DAT  (mong doi True)  message of size 17 (added 2022-12)[0m
+[92m  vector 18: DAT  (mong doi True)  message of size 100 (added 2022-12)[0m
+[92m=> 19/19 vector dat[0m
+
+[1m======================================================================
+B. PHEP THU NGAU NHIEN (200 lan moi phep)
+======================================================================[0m
+  B1 chu ky hop le duoc chap nhan          : 200/200
+  B2 sua 1 bit thong diep -> bi tu choi    : 200/200
+  B3 sua 1 bit chu ky -> bi tu choi        : 200/200
+  B4 sai khoa cong khai -> bi tu choi      : 200/200
+  B6 bien the khong key-prefixing van dung    : 200/200   (chi de lam doi chung o muc 3.3.3)
+  B5 cung (sk, m, aux) -> cung chu ky      : True
+
+[1m======================================================================
+C. HIEU NANG (200 lan)
+======================================================================[0m
+  KeyGen : 1.956 ms (min 1.590 / max 5.932)
+  Sign   : 7.922 ms (min 6.736 / max 17.639)   (da gom 1 lan verify noi bo)
+  Verify : 4.072 ms (min 3.345 / max 11.384)
+  Kich thuoc: khoa cong khai 32 byte, chu ky 64 byte
+
+[1m======================================================================
+D. XAC MINH HANG LOAT (batch verification)
+======================================================================[0m
+  Lo 8 chu ky hop le duoc chap nhan          : 50/50
+  Lo co 1 chu ky sai bi tu choi              : 50/50
+
+[1m======================================================================
+E. SO SANH SCHNORR VOI ECDSA tren cung duong cong, cung ma Python (200 lan)
+======================================================================[0m
+                           Ky (ms)   Xac minh (ms)
+  Schnorr (x_R,s)            1.994           4.144
+  Schnorr, tinh lai Y        3.964   (dung dac ta: them 1 phep nhan diem de tinh Y = xG)
+  ECDSA (r,s)                2.033           3.987
+  Ky: ECDSA / Schnorr = 1.019;   Xac minh: ECDSA / Schnorr = 0.962
+  Kich thuoc chu ky: Schnorr 64 byte; ECDSA 64 byte (r||s) hoac DER trung binh 71.0 byte
+  Luu y: ca hai deu dung cung phep nhan diem; ECDSA them 1-2 phep nghich dao modulo (rat re so voi nhan diem).

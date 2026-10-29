@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "name": "user1",
+      "private_key": "71d7380f192a2368d3bb70ac6312c30ed9e3e1bf17578333012a11e339ea2a34",
+      "public_key": "774f0b988ce8cb56e51651ca32d3aae0b0eaed7b34ebc64fdc942f88dcffe31b"
+    },
+    {
+      "name": "user2",
+      "private_key": "b52567a5a75f341244a612dda61881dd3010f49fcfe472acda06fef5fb475012",
+      "public_key": "09986d354bd1062b494c27ae76b3d5ffb2e82d67264ca3a43959dee9bd4a408e"
+    }
+  ]
+}

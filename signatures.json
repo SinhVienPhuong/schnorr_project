@@ -1,0 +1,14 @@
+{
+  "signatures": [
+    {
+      "user": "user1",
+      "message": "Chuyen 100 USD cho Bob",
+      "signature": "c87ebfbd0fcb1435e6f7ef47642c1ca58acfe84f45285aa031e3fe4addf0f5223dad219d2e678a1427bbbef9d34db75341221679651a972acb7737796a54ff48"
+    },
+    {
+      "user": "user1",
+      "message": "Chuyen 100 USD cho Bob",
+      "signature": "2bb63b0eefa04ef70d2647f7c3b378df6ab8b7a54f1e997d9a43a6748ec945171f86ecc3bc8f10f885d06ce6c7a5e7f8c9a4d12f7bf2ca7d0053276aff59acee"
+    }
+  ]
+}

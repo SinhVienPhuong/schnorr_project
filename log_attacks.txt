@@ -1,0 +1,23 @@
+
+[1m======================================================================
+THONG KE KICH BAN 1 (200 lan)
+======================================================================[0m
+  (a) Khong phong thu: khoi phuc dung x = (s1-s2)/(e1-e2): 200/200;  chu ky gia duoc chap nhan: 200/200
+  (b) Co phong thu (nonce dan xuat tu khoa + thong diep): x_R khac nhau 200/200; cong thuc tan cong cho ket qua sai 200/200
+
+[1m======================================================================
+THONG KE KICH BAN 2 (200 lan)
+======================================================================[0m
+  (a) Luoc do day du, thu 16384 thong diep moi lan: tim duoc m* 0/200
+  (b) Khong gian 2^12 (20 lan): tim duoc m* 20/20, chu ky gia qua xac minh day du 20/20, trung binh 4583 thong diep (ky vong ~4096)
+  (c) Ham bam yeu e = H(m): gia mao thanh cong 200/200
+
+[1m======================================================================
+THONG KE KICH BAN 3 (200 lan)
+======================================================================[0m
+  Phan A (dich khoa Y' = Y - aG, s' = s - a*e):
+     khong key-prefixing e = H(x_R||m)    : tan cong thanh cong 200/200
+     co key-prefixing (BIP-340)           : tan cong thanh cong 0/200
+  Phan B (phat sinh khoa phan cap):
+     khong cung hoa: khoi phuc khoa cha 200/200; tinh dung khoa con khac 200/200; chu ky gia duoc chap nhan 200/200
+     cung hoa (phong thu): tan cong thanh cong 0/200
